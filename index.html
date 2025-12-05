@@ -1,189 +1,71 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Phrases d'Émotions</title>
+<meta charset="UTF-8">
+<title>Amour - EmotionLand</title>
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Poppins", sans-serif;
-            background: linear-gradient(135deg, #ff9ac6, #ffb7dd, #ffd4ec);
-            background-size: 300% 300%;
-            animation: bgAnimation 12s ease infinite;
-            color: #4a2b38;
-            text-align: center;
-        }
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: url('images/rose1.jpg') center/cover no-repeat fixed;
+        color: #4a2b38;
+        text-align: center;
+    }
 
-        @keyframes bgAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+    nav {
+        padding: 20px;
+    }
 
-        header {
-            padding: 60px 20px 40px;
-        }
+    nav a {
+        margin: 10px;
+        padding: 10px 20px;
+        background: white;
+        border-radius: 20px;
+        text-decoration: none;
+        color: #ff2f99;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(255,255,255,0.7);
+    }
 
-        h1 {
-            font-size: 2.8em;
-            margin-bottom: 10px;
-            color: #4a2b38;
-            text-shadow: 0 2px 5px rgba(255, 255, 255, 0.4);
-        }
+    .content {
+        background: rgba(255,255,255,0.6);
+        backdrop-filter: blur(10px);
+        margin: 40px auto;
+        padding: 25px;
+        border-radius: 20px;
+        max-width: 800px;
+    }
 
-        .subtitle {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
+    .phrase {
+        margin: 20px 0;
+        font-size: 1.4em;
+        background: rgba(255,255,255,0.7);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(255,255,255,0.5);
+    }
+</style>
 
-        /* ----- Onglets ----- */
-        .tabs {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .tab {
-            padding: 12px 22px;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 25px;
-            cursor: pointer;
-            transition: 0.3s;
-            font-weight: 500;
-            backdrop-filter: blur(10px);
-            border: 2px solid transparent;
-        }
-
-        .tab:hover {
-            background: rgba(255, 255, 255, 0.55);
-        }
-
-        .tab.active {
-            background: white;
-            border-color: #ff7ab8;
-            color: #ff4f9b;
-            font-weight: bold;
-            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.5);
-        }
-
-        /* ----- Contenu ----- */
-        .container {
-            max-width: 850px;
-            margin: 35px auto;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.45);
-            border-radius: 15px;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
-        }
-
-        .content {
-            display: none;
-            animation: fadeIn 0.7s ease;
-        }
-
-        .content.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .phrase {
-            font-size: 1.3em;
-            margin: 18px 0;
-            line-height: 1.6;
-            background: rgba(255, 255, 255, 0.6);
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(255, 255, 255, 0.4);
-        }
-
-        footer {
-            margin-top: 50px;
-            padding: 20px;
-            font-size: 0.95em;
-            opacity: 0.8;
-            color: #4a2b38;
-        }
-    </style>
 </head>
 
 <body>
-    <header>
-        <h1>🌸 Phrases d'Émotions 🌸</h1>
-        <p class="subtitle">Un monde où chaque mot touche le cœur…</p>
-    </header>
+    <nav>
+        <a href="index.html">🏠 Accueil</a>
+        <a href="tristesse.html">💔 Tristesse</a>
+        <a href="espoir.html">✨ Espoir</a>
+        <a href="joie.html">😊 Joie</a>
+    </nav>
 
-    <!-- ONGLET -->
-    <div class="tabs">
-        <div class="tab active" data-tab="amour">❤️ Amour</div>
-        <div class="tab" data-tab="tristesse">💔 Tristesse</div>
-        <div class="tab" data-tab="espoir">✨ Espoir</div>
-        <div class="tab" data-tab="joie">😊 Joie</div>
+    <div class="content">
+        <h1>❤️ Amour</h1>
+
+        <div class="phrase">"L’amour, c’est quand ton sourire devient ma raison d’exister."</div>
+        <div class="phrase">"Je t’aime jusqu’au silence, là où les mots disparaissent."</div>
+        <div class="phrase">"Ton regard est ma plus belle lumière."</div>
+        <div class="phrase">"Chaque battement de mon cœur murmure ton nom."</div>
     </div>
-
-    <div class="container">
-
-        <!-- AMOUR -->
-        <div class="content active" id="amour">
-            <div class="phrase">"L’amour, c’est quand ton sourire devient ma raison d’exister."</div>
-            <div class="phrase">"Je t’aime jusqu’au silence, là où les mots n’ont plus assez de place."</div>
-            <div class="phrase">"Ton regard est la seule lumière dont mon cœur a besoin."</div>
-        </div>
-
-        <!-- TRISTESSE -->
-        <div class="content" id="tristesse">
-            <div class="phrase">"Parfois, les personnes qu’on aime le plus sont celles qui nous brisent le plus."</div>
-            <div class="phrase">"La tristesse n’est que l’ombre d’un amour trop grand pour s’éteindre."</div>
-            <div class="phrase">"Les silences les plus lourds sont ceux remplis de larmes invisibles."</div>
-        </div>
-
-        <!-- ESPOIR -->
-        <div class="content" id="espoir">
-            <div class="phrase">"Même les nuits les plus sombres finissent par laisser place à l’aube."</div>
-            <div class="phrase">"L’espoir, c’est croire que demain peut être plus doux que hier."</div>
-            <div class="phrase">"Chaque cœur brisé porte en lui la force de renaître."</div>
-        </div>
-
-        <!-- JOIE -->
-        <div class="content" id="joie">
-            <div class="phrase">"La joie se cache souvent dans les petits instants qu’on oublie de regarder."</div>
-            <div class="phrase">"Ton rire illumine mes journées comme un soleil inattendu."</div>
-            <div class="phrase">"Être heureux, c’est savoir apprécier ce que la vie offre sans prévenir."</div>
-        </div>
-
-    </div>
-
-    <footer>
-        © 2025 – Ton univers d'émotions 🌸
-    </footer>
-
-    <script>
-        const tabs = document.querySelectorAll(".tab");
-        const contents = document.querySelectorAll(".content");
-
-        tabs.forEach(tab => {
-            tab.addEventListener("click", () => {
-
-                tabs.forEach(t => t.classList.remove("active"));
-                tab.classList.add("active");
-
-                const target = tab.getAttribute("data-tab");
-                contents.forEach(c => {
-                    c.classList.remove("active");
-                    if (c.id === target) c.classList.add("active");
-                });
-            });
-        });
-    </script>
 
 </body>
 </html>
